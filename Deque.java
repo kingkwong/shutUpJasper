@@ -12,8 +12,4 @@ public interface Deque <Q> {
 
     public Q peekLast();
 
-    public Q getFirst();
-
-    public Q getLast();
-    
 }//end interface Deque                                                                                           
