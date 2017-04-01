@@ -12,4 +12,6 @@ public interface Deque <Q> {
 
     public Q peekLast();
 
+    public boolean isEmpty();
+  
 }//end interface Deque                                                                                           
