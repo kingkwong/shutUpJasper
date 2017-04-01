@@ -1,8 +1,8 @@
 public interface Deque <Q> {
-    
-    public void addLast ( Q e);
-    
+  
     public Q removeFirst();
+    
+    public Q removeLast();
     
     public void addFirst( Q e );
     
