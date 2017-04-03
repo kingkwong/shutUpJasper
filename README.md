@@ -3,19 +3,19 @@
 ### Deque impelements the following methods:
 
 ##### removeFirst
-Removes the first element
+Removes the first element, if list is empty exception thrown
 ##### removeLast
-Removes the last element
+Removes the last element, if list is empty exception thrown
 ##### addFirst
 Adds to the front of the list
 ##### addLast
 Adds to the end of the list
 ##### peekFirst
-Look at the element at the front of the list
+Look at the element at the front of the list, returns null if list is empty
 ##### pollFirst
 Remove first element, returns null if list is empty
 ##### peekLast
-Look at the element at the end of the list
+Look at the element at the end of the list, returns null if list is empty
 ##### pollLast
 Remove last element, returns null if list is empty
 ##### isEmpty
