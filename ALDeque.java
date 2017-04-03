@@ -4,6 +4,7 @@
 // 2017-04-02
 
 import java.util.ArrayList;
+import java.util.NoSuchElementException;
 
 public class ALDeque<T> implements Deque<T> {
 
@@ -18,32 +19,38 @@ public class ALDeque<T> implements Deque<T> {
     }
 
     public T peekFirst() {
+	if ( isEmpty() ) throw new NoSuchElementException("YOU CAN NOT DO THAT!!!!!!!");
 	return _container.get(0);
     }
 
     public T pollFirst() {
 	if ( isEmpty() ) return null;
-	return _container.get(0);
+	T retVal = _container.get(0);
+	_container.remove(0);
+	return retVal;
     }
 
     public T peekLast() {
+	if ( isEmpty() ) throw new NoSuchElementException("YOU CAN NOT DO THAT!!!!!!!");
 	return _container.get( _container.size()-1 );
     }
 
     public T pollLast() {
-	if ( isEmpty() ) return null;
-	return _container.get( _container.size()-1 );
-    }
-
-    public T removeLast() {
 	if ( isEmpty() ) return null;
 	T retVal = _container.get(_container.size()-1);
 	_container.remove( _container.size() - 1 );
 	return retVal;
     }
 
+    public T removeLast() {
+	if ( isEmpty() ) throw new NoSuchElementException("YOU CAN NOT DO THAT!!!!!!!");
+	T retVal = _container.get(_container.size()-1);
+	_container.remove( _container.size() - 1 );
+	return retVal;
+    }
+
     public T removeFirst() {
-	if ( isEmpty() ) return null;
+        if ( isEmpty() ) throw new NoSuchElementException("YOU CAN NOT DO THAT!!!!!!!");
 	T retVal = _container.get(0);
 	_container.remove(0);
 	return retVal;
@@ -58,11 +65,11 @@ public class ALDeque<T> implements Deque<T> {
     }
 
     public String toString() {
-        String ret = "Head <--> ";
+        String ret = "HEAD <--> ";
         for (T value : _container) {
             ret += value + " <--> ";
         }
-        return ret + "Tail";
+        return ret + "TAIL";
     }
     
     public static void main ( String[] args ) {
@@ -80,7 +87,8 @@ public class ALDeque<T> implements Deque<T> {
 	System.out.println( kelly );
 	System.out.println(kelly.removeFirst());
 	System.out.println(kelly.removeFirst());
-	System.out.println(kelly.removeFirst());
+	System.out.println(kelly.pollFirst());
+	System.out.println( kelly.removeFirst() );
     }
 
 }
