@@ -1,4 +1,4 @@
-# shutUpJasper
+#  :scream: :scream: shutUpJasper  :scream: :scream: 
 
 ### Deque impelements the following methods:
 
@@ -12,13 +12,17 @@ Adds to the front of the list
 Adds to the end of the list
 ##### peekFirst
 Look at the element at the front of the list
+##### pollFirst
+Remove first element, returns null if list is empty
 ##### peekLast
 Look at the element at the end of the list
+##### pollLast
+Remove last element, returns null if list is empty
 ##### isEmpty
 Checks if the list is empty
 
 These are similar to the methods needed to implement a Queue, but Deque includes methods that allow the user to peek at, add to, or remove from both the front and end of the list.
 
-### Reasons for using an ArrayList
+### Reasons for using an ArrayList :thinking:
 
 Although an ArrayList would require an O(n) runtime when adding and removing from one end, it is a lot simpler and easier to implement than doubly linked nodes. ArrayLists have built-in size and index methods. They are more versatile than arrays because their size can be changed. 
