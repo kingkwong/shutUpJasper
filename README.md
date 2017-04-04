@@ -1,4 +1,5 @@
 #  :scream: :scream: shutUpJasper  :scream: :scream: 
+Kelly Wang, Brian Kwong, Jasper Cheung
 
 ### Deque impelements the following methods:
 
